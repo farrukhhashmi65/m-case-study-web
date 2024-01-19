@@ -3,6 +3,8 @@ import { Theme } from '@mui/material'
 import { AppThemeOptions } from './ThemeOptions'
 import { createTheme } from '@mui/material/styles'
 
+// Theme helper methods
+
 export interface AppTheme {
   name: string
   theme: Theme

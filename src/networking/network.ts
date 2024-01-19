@@ -1,7 +1,7 @@
 import axios, { AxiosRequestConfig } from 'axios'
 
 // simple function of network call - Axios Instance
-
+// Beacuse of time constraint I did not add interceptors
 const AxiosInstance = axios.create({
   baseURL: 'http://localhost:3001/api',
   timeout: 120000,

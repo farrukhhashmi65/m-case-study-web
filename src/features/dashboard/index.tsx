@@ -1,5 +1,5 @@
 import React from 'react'
-import {Container, Avatar, Paper} from '@mui/material'
+import { Container, Avatar, Paper } from '@mui/material'
 import Typography from '@mui/material/Typography'
 import AppToolbar from '../../components/AppToolbar';
 import { useSelector } from 'react-redux'
@@ -31,7 +31,7 @@ const Dashboard: React.FC<any> = (): JSX.Element => {
                         {`${firstName} ${lastName}`}
                     </Typography>
                     <Typography variant="button">
-                       {country}
+                        {country}
                     </Typography>
                 </Paper>
             </Container>

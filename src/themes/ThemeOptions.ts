@@ -8,6 +8,7 @@ import {
 } from '@mui/material/colors'
 import { Countries} from '../config/constants'
 
+//Theme platette options and name is there to identify based on countrys
 export const AppThemeOptions: any[] = [
     {
         name: Countries.Pakistan,

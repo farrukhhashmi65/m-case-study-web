@@ -2,7 +2,7 @@
 import { initializeApp } from "firebase/app";
 import { getMessaging, getToken, onMessage } from 'firebase/messaging';
 
-// Your web app's Firebase configuration
+// Firebase configuration - you can use your own if you want to test 
 const firebaseConfig = {
     apiKey: "AIzaSyBZZImaYn3SARaWasR1wo_2o7cXcLGMf1I",
     authDomain: "mashreq-web-push.firebaseapp.com",
@@ -18,11 +18,15 @@ const firebaseApp = initializeApp(firebaseConfig);
 const messaging = getMessaging(firebaseApp);
 
 export const fetchPushMessagesToken = () => {
+    //Request permission for notification
+
     Notification.requestPermission().then((permission) => {
         if (permission === "granted") {
             console.log("Notification User Permission Granted.");
             return getToken(messaging, { vapidKey: 'BD5VHyeLcw2lFmP4a9TgjmY7yXKwUSXCoJbeoHO4uOtkBEQuu_O-aaJdoZSCEd6BSgiZQyz0gPIp5RMoFvesVuw' }).then((currentToken) => {
                 if (currentToken) {
+                    // this token you can use on firebase messaging console to generate campaign based
+                    // notification for testing
                     console.log('current token for client: ', currentToken);
                 } else {
                     console.log('No registration token available. Request permission to generate one.');
@@ -36,6 +40,7 @@ export const fetchPushMessagesToken = () => {
     });
 }
 
+// FCM cloud messaging listener if App is on Foreground
 export const onMessageListener = () =>
     new Promise((resolve) => {
         onMessage(messaging, (payload) => {

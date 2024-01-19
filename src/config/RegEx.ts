@@ -6,5 +6,4 @@ export const RegEx : any = {
     USERNAME_OMAN: /^[a-zA-Z]{10,}$/,
     PASSWORD: /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/,
     ALPHABETS_ONLY_2CHARS: /^[a-zA-Z]{2,}$/
-
 };

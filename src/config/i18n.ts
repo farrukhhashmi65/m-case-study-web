@@ -6,6 +6,7 @@ import english from '../localization/en.json'
 import french from '../localization/fr.json'
 import russian from '../localization/ru.json'
 
+//i18n resource file
 i18n.use(initReactI18next).init({
   resources: {
     en: {

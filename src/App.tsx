@@ -12,6 +12,8 @@ import { Provider } from 'react-redux'
 import store from './redux/store'
 import Notification from '../src/features/Notification'
 
+// Main App file with all the providers
+
 function App() {
 
   const [appTheme, setAppTheme] = useState<AppTheme>(defaultAppTheme)

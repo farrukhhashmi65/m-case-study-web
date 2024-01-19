@@ -1,5 +1,6 @@
 import { useState } from 'react';
 
+// hook to provide validation support
 const useForm = (initialState: any = {}, validations: any[] =[]) => {
 
     const validate = (validations: any[], values: any) => {

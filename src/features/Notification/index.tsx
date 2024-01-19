@@ -23,6 +23,7 @@ const useStyles = makeStyles()((theme) => {
   }
 })
 
+// Notification component to handle web push by google cloud messaging.
 const Notification = () => {
   const { classes } = useStyles()
 

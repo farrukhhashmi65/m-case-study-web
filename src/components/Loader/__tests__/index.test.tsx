@@ -3,7 +3,6 @@ import { render, screen } from '@testing-library/react';
 import Loader from '../index';
 
 test('Loader renders when visible is true', () => {
-  // Arrange
   const props = {
     visible: true,
   };
@@ -17,7 +16,6 @@ test('Loader renders when visible is true', () => {
 });
 
 test('Loader does not render when visible is false', () => {
-  // Arrange
   const props = {
     visible: false,
   };

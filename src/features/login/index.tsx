@@ -78,6 +78,7 @@ const Login: React.FC<any> = (): JSX.Element => {
             const { status, data } = response;
             if (status === APIStatus.Success) {
                 const { country } = data;
+                //I am changing the theme on both country select and on login response
                 handleSetTheme(country)
                 navigate('/dashboard')
             }
@@ -85,6 +86,7 @@ const Login: React.FC<any> = (): JSX.Element => {
     }, [response, loading]);
 
 
+    //I am changing the theme on both country select and on login response
     const handleChange = (event: SelectChangeEvent) => {
         const country = event.target.value
         setCountry(country as string);
