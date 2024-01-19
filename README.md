@@ -78,3 +78,7 @@ Change vapidKey with Web Push certificates key on Firebase console
     });
 
 ```
+
+## For testing FCM Notification 
+
+Ensure you copy the generated Client Token from console. To test Cloud Messaging in your Firebase project, navigate to your application dashboard and click the Cloud Messaging tab under the Grow & engage your audience section. Click Create your first campaign, select Firebase Notification messages, and compose a notification
